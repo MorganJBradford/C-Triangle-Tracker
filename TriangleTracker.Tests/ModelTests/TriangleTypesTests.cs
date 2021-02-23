@@ -10,7 +10,15 @@ namespace TriangleTracker.TestTools
     public void Triangle_DoThreeNumbersMakeATriangle_False()
     {
       Triangle testTriangle = new Triangle(2, 2, 8);
-      Assert.AreEqual(false, testTriangle.IsATriangle(2, 2, 8));
+      Assert.AreEqual("Not a triangle.", testTriangle.IsATriangle());
+    }
+
+    [TestMethod]
+
+    public void Triangle_AreAllSidesEqual_True()
+    {
+      Triangle testTriangle = new Triangle(4, 4, 4);
+      Assert.AreEqual("Is an equilateral triangle", testTriangle.IsATriangle());
     }
   }
 }
