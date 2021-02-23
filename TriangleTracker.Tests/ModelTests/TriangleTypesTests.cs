@@ -4,13 +4,13 @@ using TriangleTracker;
 namespace TriangleTracker.TestTools
 {
   [TestClass]
-  public class TriangleTypesTests
+  public class TriangleTests
   {
     [TestMethod]
-    public void TriangleTypes_InputsThreeNumbers_True()
+    public void Triangle_DoThreeNumbersMakeATriangle_False()
     {
-      TriangleTypes testTriangleTypes = new TriangleTypes();
-      Assert.AreEqual(true, testTriangleTypes.IsATriangle(3, 4, 5));
+      Triangle testTriangle = new Triangle(2, 2, 8);
+      Assert.AreEqual(false, testTriangle.IsATriangle(2, 2, 8));
     }
   }
 }
