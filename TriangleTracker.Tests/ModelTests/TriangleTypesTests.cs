@@ -21,11 +21,17 @@ namespace TriangleTracker.TestTools
     }
 
     [TestMethod]
-
     public void Triangle_TwoSidesAreEqual_True()
     {
       Triangle testTriangle = new Triangle(4, 4, 7);
       Assert.AreEqual("Is an isosceles triangle", testTriangle.IsATriangle());
+    }
+
+    [TestMethod]
+    public void Triangle_NoSidesAreEqual_True()
+    {
+      Triangle testTriangle = new Triangle(2,3,4);
+      Assert.AreEqual("Is a scalene triangle", testTriangle.IsATriangle());
     }
   }
 }
